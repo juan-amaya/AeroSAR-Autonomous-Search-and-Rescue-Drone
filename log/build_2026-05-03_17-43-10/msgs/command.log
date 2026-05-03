@@ -1,0 +1,6 @@
+Invoking command in '/home/aerosar/ws/build/msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/aerosar/ws/src/1_interfaces/msgs -DCMAKE_INSTALL_PREFIX=/home/aerosar/ws/install/msgs
+Invoked command in '/home/aerosar/ws/build/msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/aerosar/ws/src/1_interfaces/msgs -DCMAKE_INSTALL_PREFIX=/home/aerosar/ws/install/msgs
+Invoking command in '/home/aerosar/ws/build/msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/aerosar/ws/build/msgs -- -j24 -l24
+Invoked command in '/home/aerosar/ws/build/msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/aerosar/ws/build/msgs -- -j24 -l24
+Invoking command in '/home/aerosar/ws/build/msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/aerosar/ws/build/msgs
+Invoked command in '/home/aerosar/ws/build/msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/aerosar/ws/build/msgs

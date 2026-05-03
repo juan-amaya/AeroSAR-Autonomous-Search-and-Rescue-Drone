@@ -1,0 +1,28 @@
+[1.352s] Invoking command in '/home/aerosar/ws/src/3_autonomy/mapping': PYTHONPATH=/home/aerosar/ws/build/mapping/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/aerosar/ws/install/mapping/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/mapping build --build-base /home/aerosar/ws/build/mapping/build install --record /home/aerosar/ws/build/mapping/install.log --single-version-externally-managed install_data
+[1.614s] running egg_info
+[1.631s] creating ../../../build/mapping/mapping.egg-info
+[1.631s] writing ../../../build/mapping/mapping.egg-info/PKG-INFO
+[1.631s] writing dependency_links to ../../../build/mapping/mapping.egg-info/dependency_links.txt
+[1.631s] writing requirements to ../../../build/mapping/mapping.egg-info/requires.txt
+[1.631s] writing top-level names to ../../../build/mapping/mapping.egg-info/top_level.txt
+[1.631s] writing manifest file '../../../build/mapping/mapping.egg-info/SOURCES.txt'
+[1.667s] reading manifest file '../../../build/mapping/mapping.egg-info/SOURCES.txt'
+[1.668s] writing manifest file '../../../build/mapping/mapping.egg-info/SOURCES.txt'
+[1.668s] running build
+[1.668s] running build_py
+[1.668s] creating /home/aerosar/ws/build/mapping/build/lib/mapping
+[1.668s] copying mapping/__init__.py -> /home/aerosar/ws/build/mapping/build/lib/mapping
+[1.668s] running install
+[1.673s] running install_lib
+[1.690s] creating /home/aerosar/ws/install/mapping/lib/python3.12/site-packages/mapping
+[1.691s] copying /home/aerosar/ws/build/mapping/build/lib/mapping/__init__.py -> /home/aerosar/ws/install/mapping/lib/python3.12/site-packages/mapping
+[1.691s] byte-compiling /home/aerosar/ws/install/mapping/lib/python3.12/site-packages/mapping/__init__.py to __init__.cpython-312.pyc
+[1.691s] running install_data
+[1.691s] creating /home/aerosar/ws/install/mapping/share/ament_index/resource_index/packages
+[1.692s] copying resource/mapping -> /home/aerosar/ws/install/mapping/share/ament_index/resource_index/packages
+[1.692s] copying package.xml -> /home/aerosar/ws/install/mapping/share/mapping
+[1.692s] running install_egg_info
+[1.710s] Copying ../../../build/mapping/mapping.egg-info to /home/aerosar/ws/install/mapping/lib/python3.12/site-packages/mapping-0.0.0-py3.12.egg-info
+[1.710s] running install_scripts
+[1.742s] writing list of installed files to '/home/aerosar/ws/build/mapping/install.log'
+[1.764s] Invoked command in '/home/aerosar/ws/src/3_autonomy/mapping' returned '0': PYTHONPATH=/home/aerosar/ws/build/mapping/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/aerosar/ws/install/mapping/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/mapping build --build-base /home/aerosar/ws/build/mapping/build install --record /home/aerosar/ws/build/mapping/install.log --single-version-externally-managed install_data

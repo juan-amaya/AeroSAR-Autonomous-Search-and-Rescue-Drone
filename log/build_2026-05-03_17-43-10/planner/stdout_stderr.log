@@ -1,0 +1,26 @@
+running egg_info
+creating ../../../build/planner/planner.egg-info
+writing ../../../build/planner/planner.egg-info/PKG-INFO
+writing dependency_links to ../../../build/planner/planner.egg-info/dependency_links.txt
+writing requirements to ../../../build/planner/planner.egg-info/requires.txt
+writing top-level names to ../../../build/planner/planner.egg-info/top_level.txt
+writing manifest file '../../../build/planner/planner.egg-info/SOURCES.txt'
+reading manifest file '../../../build/planner/planner.egg-info/SOURCES.txt'
+writing manifest file '../../../build/planner/planner.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/aerosar/ws/build/planner/build/lib/planner
+copying planner/__init__.py -> /home/aerosar/ws/build/planner/build/lib/planner
+running install
+running install_lib
+creating /home/aerosar/ws/install/planner/lib/python3.12/site-packages/planner
+copying /home/aerosar/ws/build/planner/build/lib/planner/__init__.py -> /home/aerosar/ws/install/planner/lib/python3.12/site-packages/planner
+byte-compiling /home/aerosar/ws/install/planner/lib/python3.12/site-packages/planner/__init__.py to __init__.cpython-312.pyc
+running install_data
+creating /home/aerosar/ws/install/planner/share/ament_index/resource_index/packages
+copying resource/planner -> /home/aerosar/ws/install/planner/share/ament_index/resource_index/packages
+copying package.xml -> /home/aerosar/ws/install/planner/share/planner
+running install_egg_info
+Copying ../../../build/planner/planner.egg-info to /home/aerosar/ws/install/planner/lib/python3.12/site-packages/planner-0.0.0-py3.12.egg-info
+running install_scripts
+writing list of installed files to '/home/aerosar/ws/build/planner/install.log'

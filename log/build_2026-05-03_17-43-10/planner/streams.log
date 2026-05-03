@@ -1,0 +1,28 @@
+[1.321s] Invoking command in '/home/aerosar/ws/src/3_autonomy/planner': PYTHONPATH=/home/aerosar/ws/build/planner/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/aerosar/ws/install/planner/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/planner build --build-base /home/aerosar/ws/build/planner/build install --record /home/aerosar/ws/build/planner/install.log --single-version-externally-managed install_data
+[1.566s] running egg_info
+[1.579s] creating ../../../build/planner/planner.egg-info
+[1.579s] writing ../../../build/planner/planner.egg-info/PKG-INFO
+[1.580s] writing dependency_links to ../../../build/planner/planner.egg-info/dependency_links.txt
+[1.580s] writing requirements to ../../../build/planner/planner.egg-info/requires.txt
+[1.580s] writing top-level names to ../../../build/planner/planner.egg-info/top_level.txt
+[1.580s] writing manifest file '../../../build/planner/planner.egg-info/SOURCES.txt'
+[1.612s] reading manifest file '../../../build/planner/planner.egg-info/SOURCES.txt'
+[1.612s] writing manifest file '../../../build/planner/planner.egg-info/SOURCES.txt'
+[1.613s] running build
+[1.613s] running build_py
+[1.614s] creating /home/aerosar/ws/build/planner/build/lib/planner
+[1.614s] copying planner/__init__.py -> /home/aerosar/ws/build/planner/build/lib/planner
+[1.614s] running install
+[1.617s] running install_lib
+[1.632s] creating /home/aerosar/ws/install/planner/lib/python3.12/site-packages/planner
+[1.633s] copying /home/aerosar/ws/build/planner/build/lib/planner/__init__.py -> /home/aerosar/ws/install/planner/lib/python3.12/site-packages/planner
+[1.633s] byte-compiling /home/aerosar/ws/install/planner/lib/python3.12/site-packages/planner/__init__.py to __init__.cpython-312.pyc
+[1.633s] running install_data
+[1.633s] creating /home/aerosar/ws/install/planner/share/ament_index/resource_index/packages
+[1.633s] copying resource/planner -> /home/aerosar/ws/install/planner/share/ament_index/resource_index/packages
+[1.634s] copying package.xml -> /home/aerosar/ws/install/planner/share/planner
+[1.634s] running install_egg_info
+[1.649s] Copying ../../../build/planner/planner.egg-info to /home/aerosar/ws/install/planner/lib/python3.12/site-packages/planner-0.0.0-py3.12.egg-info
+[1.649s] running install_scripts
+[1.682s] writing list of installed files to '/home/aerosar/ws/build/planner/install.log'
+[1.705s] Invoked command in '/home/aerosar/ws/src/3_autonomy/planner' returned '0': PYTHONPATH=/home/aerosar/ws/build/planner/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/aerosar/ws/install/planner/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/planner build --build-base /home/aerosar/ws/build/planner/build install --record /home/aerosar/ws/build/planner/install.log --single-version-externally-managed install_data

@@ -1,0 +1,14 @@
+package.xml
+setup.cfg
+setup.py
+../../../build/evaluator/eval.egg-info/PKG-INFO
+../../../build/evaluator/eval.egg-info/SOURCES.txt
+../../../build/evaluator/eval.egg-info/dependency_links.txt
+../../../build/evaluator/eval.egg-info/requires.txt
+../../../build/evaluator/eval.egg-info/top_level.txt
+../../../build/evaluator/eval.egg-info/zip-safe
+eval/__init__.py
+resource/eval
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py

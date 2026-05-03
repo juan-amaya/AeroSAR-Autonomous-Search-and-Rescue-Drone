@@ -1,0 +1,1 @@
+/home/aerosar/ws/build/px4_interface/ament_cmake_environment_hooks/local_setup.zsh

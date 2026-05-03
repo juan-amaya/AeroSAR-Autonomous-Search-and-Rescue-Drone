@@ -1,0 +1,15 @@
+/home/aerosar/ws/install/msgs/share/ament_index/resource_index/package_run_dependencies/msgs
+/home/aerosar/ws/install/msgs/share/ament_index/resource_index/parent_prefix_path/msgs
+/home/aerosar/ws/install/msgs/share/msgs/environment/ament_prefix_path.sh
+/home/aerosar/ws/install/msgs/share/msgs/environment/ament_prefix_path.dsv
+/home/aerosar/ws/install/msgs/share/msgs/environment/path.sh
+/home/aerosar/ws/install/msgs/share/msgs/environment/path.dsv
+/home/aerosar/ws/install/msgs/share/msgs/local_setup.bash
+/home/aerosar/ws/install/msgs/share/msgs/local_setup.sh
+/home/aerosar/ws/install/msgs/share/msgs/local_setup.zsh
+/home/aerosar/ws/install/msgs/share/msgs/local_setup.dsv
+/home/aerosar/ws/install/msgs/share/msgs/package.dsv
+/home/aerosar/ws/install/msgs/share/ament_index/resource_index/packages/msgs
+/home/aerosar/ws/install/msgs/share/msgs/cmake/msgsConfig.cmake
+/home/aerosar/ws/install/msgs/share/msgs/cmake/msgsConfig-version.cmake
+/home/aerosar/ws/install/msgs/share/msgs/package.xml

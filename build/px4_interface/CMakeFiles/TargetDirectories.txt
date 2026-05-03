@@ -1,0 +1,9 @@
+/home/aerosar/ws/build/px4_interface/CMakeFiles/uninstall.dir
+/home/aerosar/ws/build/px4_interface/CMakeFiles/px4_interface_uninstall.dir
+/home/aerosar/ws/build/px4_interface/CMakeFiles/test.dir
+/home/aerosar/ws/build/px4_interface/CMakeFiles/edit_cache.dir
+/home/aerosar/ws/build/px4_interface/CMakeFiles/rebuild_cache.dir
+/home/aerosar/ws/build/px4_interface/CMakeFiles/list_install_components.dir
+/home/aerosar/ws/build/px4_interface/CMakeFiles/install.dir
+/home/aerosar/ws/build/px4_interface/CMakeFiles/install/local.dir
+/home/aerosar/ws/build/px4_interface/CMakeFiles/install/strip.dir

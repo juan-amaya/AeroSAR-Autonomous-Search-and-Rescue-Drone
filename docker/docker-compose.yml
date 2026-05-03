@@ -1,0 +1,47 @@
+services:
+
+  # ── Main ROS 2 dev container ───────────────────────────────────────────────
+  ros2-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: aerosar_ros2
+    environment:
+      - DISPLAY=${DISPLAY}
+      - ROS_DOMAIN_ID=0
+      - FASTRTPS_DEFAULT_PROFILES_FILE=/home/aerosar/ws/config/fastdds.xml
+    volumes:
+      - ..:/home/aerosar/ws          # mount entire repo
+      - /tmp/.X11-unix:/tmp/.X11-unix # GUI forwarding
+    network_mode: host
+    stdin_open: true
+    tty: true
+    depends_on:
+      - xrce-agent
+
+  # ── Micro XRCE-DDS Agent (PX4 <-> ROS 2 bridge) ───────────────────────────
+  xrce-agent:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: aerosar_xrce
+    command: MicroXRCEAgent udp4 -p 8888
+    network_mode: host
+    restart: unless-stopped
+
+  # ── PX4 SITL ───────────────────────────────────────────────────────────────
+  px4-sitl:
+    image: px4io/px4-dev-simulation-focal:latest
+    container_name: aerosar_px4
+    environment:
+      - DISPLAY=${DISPLAY}
+      - PX4_SIM_HOST_ADDR=127.0.0.1
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ../sim:/sim
+    network_mode: host
+    stdin_open: true
+    tty: true
+    command: >
+      bash -c "cd /PX4-Autopilot &&
+               make px4_sitl gz_x500"

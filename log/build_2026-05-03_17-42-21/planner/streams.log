@@ -1,0 +1,7 @@
+[1.393s] Invoking command in '/home/aerosar/ws/build/planner': PYTHONPATH=/home/aerosar/ws/build/planner/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/aerosar/ws/install/planner/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/aerosar/ws/build/planner/build --no-deps symlink_data
+[1.634s] usage: setup.py [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
+[1.634s]    or: setup.py --help [cmd1 cmd2 ...]
+[1.634s]    or: setup.py --help-commands
+[1.634s]    or: setup.py cmd --help
+[1.634s] 
+[1.635s] error: option --editable not recognized

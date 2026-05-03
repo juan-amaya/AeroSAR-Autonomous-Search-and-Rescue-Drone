@@ -1,0 +1,44 @@
+{
+  "name": "AeroSAR Dev",
+  "dockerComposeFile": "../docker/docker-compose.yml",
+  "service": "ros2-dev",
+  "workspaceFolder": "/home/aerosar/ws",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.ruff",
+        "ms-iot.vscode-ros",
+        "twxs.cmake",
+        "ms-vscode.cmake-tools",
+        "redhat.vscode-yaml",
+        "GitHub.copilot",
+        "eamodio.gitlens",
+        "yzhang.markdown-all-in-one"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/bin/python3",
+        "ros.distro": "jazzy",
+        "editor.formatOnSave": true,
+        "editor.rulers": [
+          100
+        ],
+        "[python]": {
+          "editor.defaultFormatter": "ms-python.ruff"
+        }
+      }
+    }
+  },
+  "remoteUser": "aerosar",
+  "postCreateCommand": "rosdep update && cd /home/aerosar/ws && rosdep install --from-paths src --ignore-src -r -y",
+  "forwardPorts": [
+    8888
+  ],
+  "mounts": [
+    "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind"
+  ],
+  "containerEnv": {
+    "DISPLAY": "${localEnv:DISPLAY}",
+    "ROS_DOMAIN_ID": "0"
+  }
+}

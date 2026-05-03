@@ -1,0 +1,18 @@
+# AeroSAR Python dependencies
+# Managed separately from apt to avoid debian conflicts
+
+# ML / Perception
+ultralytics
+torch
+torchvision
+
+# Data
+pandas
+shapely
+pygeodesy
+geojson
+
+# Dev tools
+ruff
+mypy
+pytest

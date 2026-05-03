@@ -1,0 +1,14 @@
+package.xml
+setup.cfg
+setup.py
+../../../build/geolocation/geolocation.egg-info/PKG-INFO
+../../../build/geolocation/geolocation.egg-info/SOURCES.txt
+../../../build/geolocation/geolocation.egg-info/dependency_links.txt
+../../../build/geolocation/geolocation.egg-info/requires.txt
+../../../build/geolocation/geolocation.egg-info/top_level.txt
+../../../build/geolocation/geolocation.egg-info/zip-safe
+geolocation/__init__.py
+resource/geolocation
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py

@@ -1,0 +1,28 @@
+[1.376s] Invoking command in '/home/aerosar/ws/src/5_output/evaluator': PYTHONPATH=/home/aerosar/ws/build/evaluator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/aerosar/ws/install/evaluator/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/evaluator build --build-base /home/aerosar/ws/build/evaluator/build install --record /home/aerosar/ws/build/evaluator/install.log --single-version-externally-managed install_data
+[1.614s] running egg_info
+[1.629s] creating ../../../build/evaluator/eval.egg-info
+[1.629s] writing ../../../build/evaluator/eval.egg-info/PKG-INFO
+[1.629s] writing dependency_links to ../../../build/evaluator/eval.egg-info/dependency_links.txt
+[1.629s] writing requirements to ../../../build/evaluator/eval.egg-info/requires.txt
+[1.630s] writing top-level names to ../../../build/evaluator/eval.egg-info/top_level.txt
+[1.630s] writing manifest file '../../../build/evaluator/eval.egg-info/SOURCES.txt'
+[1.659s] reading manifest file '../../../build/evaluator/eval.egg-info/SOURCES.txt'
+[1.659s] writing manifest file '../../../build/evaluator/eval.egg-info/SOURCES.txt'
+[1.660s] running build
+[1.660s] running build_py
+[1.660s] creating /home/aerosar/ws/build/evaluator/build/lib/eval
+[1.660s] copying eval/__init__.py -> /home/aerosar/ws/build/evaluator/build/lib/eval
+[1.660s] running install
+[1.664s] running install_lib
+[1.680s] creating /home/aerosar/ws/install/evaluator/lib/python3.12/site-packages/eval
+[1.681s] copying /home/aerosar/ws/build/evaluator/build/lib/eval/__init__.py -> /home/aerosar/ws/install/evaluator/lib/python3.12/site-packages/eval
+[1.681s] byte-compiling /home/aerosar/ws/install/evaluator/lib/python3.12/site-packages/eval/__init__.py to __init__.cpython-312.pyc
+[1.681s] running install_data
+[1.681s] copying resource/eval -> /home/aerosar/ws/install/evaluator/share/ament_index/resource_index/packages
+[1.681s] creating /home/aerosar/ws/install/evaluator/share/eval
+[1.682s] copying package.xml -> /home/aerosar/ws/install/evaluator/share/eval
+[1.682s] running install_egg_info
+[1.697s] Copying ../../../build/evaluator/eval.egg-info to /home/aerosar/ws/install/evaluator/lib/python3.12/site-packages/eval-0.0.0-py3.12.egg-info
+[1.697s] running install_scripts
+[1.728s] writing list of installed files to '/home/aerosar/ws/build/evaluator/install.log'
+[1.747s] Invoked command in '/home/aerosar/ws/src/5_output/evaluator' returned '0': PYTHONPATH=/home/aerosar/ws/build/evaluator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/aerosar/ws/install/evaluator/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/evaluator build --build-base /home/aerosar/ws/build/evaluator/build install --record /home/aerosar/ws/build/evaluator/install.log --single-version-externally-managed install_data

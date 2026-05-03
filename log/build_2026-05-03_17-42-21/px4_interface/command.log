@@ -1,1 +1,0 @@
-Invoking command in '/home/aerosar/ws/build/px4_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/aerosar/ws/src/2_control/px4_interface -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/aerosar/ws/install/px4_interface

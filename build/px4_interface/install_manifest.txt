@@ -1,0 +1,15 @@
+/home/aerosar/ws/install/px4_interface/share/ament_index/resource_index/package_run_dependencies/px4_interface
+/home/aerosar/ws/install/px4_interface/share/ament_index/resource_index/parent_prefix_path/px4_interface
+/home/aerosar/ws/install/px4_interface/share/px4_interface/environment/ament_prefix_path.sh
+/home/aerosar/ws/install/px4_interface/share/px4_interface/environment/ament_prefix_path.dsv
+/home/aerosar/ws/install/px4_interface/share/px4_interface/environment/path.sh
+/home/aerosar/ws/install/px4_interface/share/px4_interface/environment/path.dsv
+/home/aerosar/ws/install/px4_interface/share/px4_interface/local_setup.bash
+/home/aerosar/ws/install/px4_interface/share/px4_interface/local_setup.sh
+/home/aerosar/ws/install/px4_interface/share/px4_interface/local_setup.zsh
+/home/aerosar/ws/install/px4_interface/share/px4_interface/local_setup.dsv
+/home/aerosar/ws/install/px4_interface/share/px4_interface/package.dsv
+/home/aerosar/ws/install/px4_interface/share/ament_index/resource_index/packages/px4_interface
+/home/aerosar/ws/install/px4_interface/share/px4_interface/cmake/px4_interfaceConfig.cmake
+/home/aerosar/ws/install/px4_interface/share/px4_interface/cmake/px4_interfaceConfig-version.cmake
+/home/aerosar/ws/install/px4_interface/share/px4_interface/package.xml

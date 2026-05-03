@@ -1,6 +1,0 @@
-Invoking command in '/home/aerosar/ws/build/px4_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/aerosar/ws/src/2_control/px4_interface -DCMAKE_INSTALL_PREFIX=/home/aerosar/ws/install/px4_interface
-Invoked command in '/home/aerosar/ws/build/px4_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/aerosar/ws/src/2_control/px4_interface -DCMAKE_INSTALL_PREFIX=/home/aerosar/ws/install/px4_interface
-Invoking command in '/home/aerosar/ws/build/px4_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/aerosar/ws/build/px4_interface -- -j24 -l24
-Invoked command in '/home/aerosar/ws/build/px4_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/aerosar/ws/build/px4_interface -- -j24 -l24
-Invoking command in '/home/aerosar/ws/build/px4_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/aerosar/ws/build/px4_interface
-Invoked command in '/home/aerosar/ws/build/px4_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/aerosar/ws/build/px4_interface

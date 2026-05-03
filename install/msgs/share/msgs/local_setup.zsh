@@ -1,1 +1,0 @@
-/home/aerosar/ws/build/msgs/ament_cmake_environment_hooks/local_setup.zsh

@@ -2,8 +2,12 @@
 build/
 install/
 log/
+__pycache__/
 
 # PX4
 *.ulg
 *.bson
 dataman
+*.pyc
+*.egg-info/
+*.so

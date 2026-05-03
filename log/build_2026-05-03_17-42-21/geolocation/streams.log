@@ -1,7 +1,0 @@
-[1.415s] Invoking command in '/home/aerosar/ws/build/geolocation': PYTHONPATH=/home/aerosar/ws/build/geolocation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/aerosar/ws/install/geolocation/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/aerosar/ws/build/geolocation/build --no-deps symlink_data
-[1.668s] usage: setup.py [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
-[1.668s]    or: setup.py --help [cmd1 cmd2 ...]
-[1.668s]    or: setup.py --help-commands
-[1.668s]    or: setup.py cmd --help
-[1.668s] 
-[1.669s] error: option --editable not recognized

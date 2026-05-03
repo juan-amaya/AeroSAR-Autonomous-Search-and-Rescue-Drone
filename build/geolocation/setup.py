@@ -1,1 +1,0 @@
-/home/aerosar/ws/src/4_perception/geolocation/setup.py

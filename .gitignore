@@ -3,11 +3,28 @@ build/
 install/
 log/
 __pycache__/
-
-# PX4
-*.ulg
-*.bson
-dataman
 *.pyc
 *.egg-info/
 *.so
+
+# PX4 logs and data
+*.ulg
+*.bson
+dataman
+
+# PX4-Autopilot submodule build output (if not using as submodule)
+sim/PX4-Autopilot/build/
+
+# Gazebo
+.gz/
+
+# VS Code devcontainer local overrides
+.vscode/settings.json
+
+# Python virtual envs
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db

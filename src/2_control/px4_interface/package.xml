@@ -3,7 +3,7 @@
   <name>px4_interface</name>
   <version>0.0.0</version>
   <description>PX4 offboard interface for AeroSAR</description>
-  <maintainer email="aerosar@example.com">aerosar</maintainer>
+  <maintainer email="jdamayac@outlook.com">aerosar</maintainer>
   <license>MIT</license>
 
   <buildtool_depend>ament_python</buildtool_depend>

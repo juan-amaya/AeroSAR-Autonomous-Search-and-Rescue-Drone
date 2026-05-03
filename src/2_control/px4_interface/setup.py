@@ -20,6 +20,7 @@ setup(
     entry_points={
         "console_scripts": [
             "offboard_hover = px4_interface.offboard_hover_node:main",
+            "waypoint_sequencer = px4_interface.waypoint_sequencer:main", 
         ],
     },
 )

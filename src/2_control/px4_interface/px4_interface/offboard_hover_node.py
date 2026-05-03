@@ -21,9 +21,18 @@ class OffboardHoverNode(Node):
     def __init__ (self):
         super().__init__("offboard_hover_node")
         
-        qos = QoSProfile(
+        # For publishing TO PX4
+        qos_pub = QoSProfile(
             reliability=ReliabilityPolicy.BEST_EFFORT,
             durability=DurabilityPolicy.TRANSIENT_LOCAL,
+            history=HistoryPolicy.KEEP_LAST,
+            depth=1,
+        )
+
+        # For subscribing FROM PX4
+        qos_sub = QoSProfile(
+            reliability=ReliabilityPolicy.BEST_EFFORT,
+            durability=DurabilityPolicy.VOLATILE,
             history=HistoryPolicy.KEEP_LAST,
             depth=1,
         )
@@ -32,31 +41,31 @@ class OffboardHoverNode(Node):
         self.offboard_control_mode_pub = self.create_publisher (
             OffboardControlMode,
             "/fmu/in/offboard_control_mode",
-            qos,
+            qos_pub,
         )
         self.trajectory_setpoint_pub = self.create_publisher (
             TrajectorySetpoint,
             "/fmu/in/trajectory_setpoint",
-            qos,
+            qos_pub,
         )
         self.vehicle_command_pub = self.create_publisher (
             VehicleCommand,
             "/fmu/in/vehicle_command",
-            qos,
+            qos_pub,
         )
         
         self.vehicle_local_position_sub = self.create_subscription(
             VehicleLocalPosition,
             "/fmu/out/vehicle_local_position",
             self.vehicle_local_position_callback,
-            qos,
+            qos_sub,
         )
 
         self.vehicle_status_sub = self.create_subscription(
             VehicleStatus,
             "/fmu/out/vehicle_status",
             self.vehicle_status_callback,
-            qos,
+            qos_sub,
         )
         self.vehicle_local_position = None
         self.vehicle_status = None

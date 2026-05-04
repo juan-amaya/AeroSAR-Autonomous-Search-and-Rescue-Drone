@@ -1,4 +1,70 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# AeroSAR — docker-compose (AirSim + MAVROS stack)
+#
+# Architecture:
+#   HOST          → AirSim (Unreal Engine) — must be started manually on host
+#   aerosar_px4   → PX4 SITL (none_iris target, AirSim is the physics engine)
+#   aerosar_mavros→ MAVROS bridge (PX4 SITL ↔ ROS 2)
+#   aerosar_ros2  → Your ROS 2 workspace (planning, perception, bringup)
+#
+# Quick start:
+#   1. Start AirSim on host (see docs/simulation.md)
+#   2. export AIRSIM_HOST=<host-ip>   # or 172.17.0.1 if host networking
+#   3. docker compose up
+# ─────────────────────────────────────────────────────────────────────────────
+
+x-ros2-env: &ros2-env
+  DISPLAY: "${DISPLAY}"
+  ROS_DOMAIN_ID: "0"
+  RMW_IMPLEMENTATION: rmw_fastrtps_cpp
+  AIRSIM_HOST: "${AIRSIM_HOST:-172.17.0.1}" # host machine IP visible from containers
+
 services:
+
+  # ── PX4 SITL (Ubuntu 22.04 / Jammy image) ─────────────────────────────────
+  # Runs PX4 in "no-simulator" mode; AirSim on the host acts as the physics
+  # engine and connects on UDP port 14560.
+  # Clone PX4-Autopilot v1.14 into ../sim/PX4-Autopilot on the host and mount it.
+  px4-sitl:
+    image: px4io/px4-dev-simulation-jammy:latest
+    container_name: aerosar_px4
+    environment:
+      - DISPLAY=${DISPLAY}
+      - PX4_SIM_HOST_ADDR=172.17.0.1 # AirSim host IP (same as AIRSIM_HOST)
+      - PX4_HOME_LAT=0.0
+      - PX4_HOME_LON=0.0
+      - PX4_HOME_ALT=0.0
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ../sim/PX4-Autopilot:/PX4-Autopilot # clone PX4 v1.14 here on the host
+    network_mode: host
+    stdin_open: true
+    tty: true
+    # none_iris = PX4 SITL with no internal simulator (AirSim provides physics)
+    command: >
+      bash -c "cd /PX4-Autopilot &&
+               HEADLESS=1 make px4_sitl none_iris"
+
+  # ── MAVROS bridge (PX4 SITL ↔ ROS 2) ─────────────────────────────────────
+  # Replaces Micro XRCE-DDS agent from the previous Gazebo stack.
+  # PX4-Avoidance and Fast-Planner both expect MAVROS topics.
+  mavros:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: aerosar_mavros
+    environment:
+      <<: *ros2-env
+    volumes:
+      - ..:/home/aerosar/ws
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    network_mode: host
+    restart: unless-stopped
+    depends_on:
+      - px4-sitl
+    command: bash -c "source /opt/ros/humble/setup.bash && ros2 run mavros
+      mavros_node --ros-args -p fcu_url:=udp://:14540@localhost:14580 -p
+      tgt_system:=1 -p tgt_component:=1"
 
   # ── Main ROS 2 dev container ───────────────────────────────────────────────
   ros2-dev:
@@ -7,41 +73,13 @@ services:
       dockerfile: Dockerfile
     container_name: aerosar_ros2
     environment:
-      - DISPLAY=${DISPLAY}
-      - ROS_DOMAIN_ID=0
-      - FASTRTPS_DEFAULT_PROFILES_FILE=/home/aerosar/ws/config/fastdds.xml
+      <<: *ros2-env
     volumes:
-      - ..:/home/aerosar/ws          # mount entire repo
-      - /tmp/.X11-unix:/tmp/.X11-unix # GUI forwarding
+      - ..:/home/aerosar/ws
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ../../cosys_airsim:/home/aerosar/cosys_airsim
     network_mode: host
     stdin_open: true
     tty: true
     depends_on:
-      - xrce-agent
-
-  # ── Micro XRCE-DDS Agent (PX4 <-> ROS 2 bridge) ───────────────────────────
-  xrce-agent:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: aerosar_xrce
-    command: MicroXRCEAgent udp4 -p 8888
-    network_mode: host
-    restart: unless-stopped
-
-  # ── PX4 SITL ───────────────────────────────────────────────────────────────
-  px4-sitl:
-    image: px4io/px4-dev-simulation-focal:latest
-    container_name: aerosar_px4
-    environment:
-      - DISPLAY=${DISPLAY}
-      - PX4_SIM_HOST_ADDR=127.0.0.1
-    volumes:
-      - /tmp/.X11-unix:/tmp/.X11-unix
-      - ../sim:/sim
-    network_mode: host
-    stdin_open: true
-    tty: true
-    command: >
-      bash -c "cd /PX4-Autopilot &&
-               make px4_sitl gz_x500"
+      - mavros

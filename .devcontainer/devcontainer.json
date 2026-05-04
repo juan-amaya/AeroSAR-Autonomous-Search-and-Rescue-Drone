@@ -31,6 +31,7 @@
   },
   "remoteUser": "aerosar",
   "postCreateCommand": "rosdep update && cd /home/aerosar/ws && rosdep install --from-paths src --ignore-src -r -y",
+  "postStartCommand": "echo 'source /opt/ros/humble/setup.bash && source /home/aerosar/ws/install/setup.bash 2>/dev/null || true' >> /home/aerosar/.bashrc",
   "forwardPorts": [
     8888
   ],

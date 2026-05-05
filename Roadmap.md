@@ -306,3 +306,6 @@ scripts/              # run_sim.sh, run_demo.sh, evaluate_mission.py
 - CasADi: https://web.casadi.org
 - SARD dataset: https://github.com/VisDrone/VisDrone-Dataset
 - VisDrone dataset: http://aiskyeye.com
+
+
+Note: For this workflow use: docker exec when you need to check topics: "docker exec -it aerosar_ros2 bash -c "source /opt/ros/humble/setup.bash && source /home/aerosar/ws/install/setup.bash && ros2 topic echo /mavros/battery --once" "
